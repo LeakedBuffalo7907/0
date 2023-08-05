@@ -22,7 +22,7 @@
         const mediaStreamSource = audioContext.createMediaStreamSource(audioStream);
 
         // Connect to WebSocket and stream audio data
-        const socket = new WebSocket('ws://localhost:8080');
+        const socket = new WebSocket('ws://proximityvc.leakedbuffalo79.repl.co/');
         const bufferSize = 2048;
         const scriptProcessorNode = audioContext.createScriptProcessor(bufferSize, 1, 1);
 
