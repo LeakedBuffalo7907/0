@@ -10,7 +10,7 @@ local ConnectedWebsocket
 local buffer = {}
 
 function Proximity.run() 
-        local server = "ws://proximityvc.leakedbuffalo79.repl.co/"
+        local server = "wss://proximityvc.leakedbuffalo79.repl.co/"
         local ok, err = http.checkURL(server:gsub("^ws://", "http://"):gsub("^wss://", "https://"))
 
         if ok then
