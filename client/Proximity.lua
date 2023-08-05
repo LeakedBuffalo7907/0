@@ -26,9 +26,8 @@ function Proximity.run()
                 while true do
                     event, url, message = os.pullEvent("websocket_message")
                     if message ~= nil then
-                        term.setCursorPos(1,1)
-                        print(message)
                         buffer = {("b"):rep(#message):unpack(message)}
+                        buffer[#buffer] = nil
                         while not speaker.playAudio(buffer) do
                             os.pullEvent("speaker_audio_empty")
                         end
